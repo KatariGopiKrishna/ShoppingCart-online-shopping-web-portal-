@@ -1,45 +1,45 @@
-package com.niit.ShoppingCart;
-public class Product{
-	private int id;
+package com.niit.shoppingcart.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Table
+@Component
+public class Product {
+	@Id
+
+	private String id;
 	private String name;
+	private String description;
 	private int price;
-	//private List<supplier> suppliers;
-public Product(int id,String name){
-	this.id=id;
-	this.name=name;
-}
-public Product(int id,String name,int price){
-	 this.id=id;
-	 this.name=name;
-	 this.price=price;
-    }
-public void SetPrice(int price){
-	if(price<0)
-	{
-		System.out.println("the price should not be -ve");
-		price=50_000;
+	public String getId() {
+		return id;
 	}
-	this.price=price;
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	
 }
-public int getId() {
-	return id;
-}
-public void setId(int id) {
-	this.id = id;
-}
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public int getPrice() {
-	return price;
-}
-public void setPrice(int price) {
-	this.price = price;
-}
- 
-}
-
-
