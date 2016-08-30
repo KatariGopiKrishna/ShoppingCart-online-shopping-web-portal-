@@ -11,34 +11,75 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <style>     
-  .navbar-inverse{
-    background-color:rgb(0,100,200);} 
+    .navbar-inverse .navbar-nav > li > a {
+            color: white !important;
+        }
+
+            .navbar-inverse .navbar-nav > li > a:hover {
+                text-decoration: underline;
+            }
+
+        .navbar-collapse ul li {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+            .navbar-collapse ul li a {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+        .navbar-brand img {
+        	
+            width: 200px;
+            height: 40px;
+        }
+
+        .navbar-inverse {
+            background-color: #3A1B37;
+        }
    
 		 
 	.carousel-inner > .item > img,{  
     .carousel-inner > .item > a > img 
-      width: 10%;
-      margin:0;}
+      width: 100%;
+      margin:auto;}
    </style>
 </head>
 <body>
-<h1><font  face="Gadget" size="50" color="blue"><span style=padding-left:20px><img src="<c:url value="/resources/images/cart.png"/>" width="50" height="50">ShoppingCart</font> <i> <sub>shop from anywhere...!</sub></span></a></i></h1>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<h1><font  face="Gadget" size="40" color="white"><span style=padding-left:20px><img src="<c:url value="/resources/images/log.png"/>" width="50" height="50">Cameron</font> <i> <sub><font color="green">for unseen photography...!!</font></sub>
 
-<nav class="navbar navbar-inverse">
+<div class="col-md-6 col-sm-8 col-xs-11 navbar-right">
+                    <div class="navbar-form " role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" style="max-width: 1000%; width: 250%;">
+            
+                            <div class="input-group-btn"  style=padding-left:230 align="right">
+                            
+    							<button class="btn btn-default" style="background: rgb(72, 166, 72);" type="submit" ><i class="glyphicon glyphicon-search"></i></button></span>
+                          </div>
+                        </div>
+                    </div>
+
+</span></a></i></h1>
+
+
 
   <div class="container-fluid">
     <div class="navbar-header"> </div><font face="bold" size="5" color="White">
     <ul class="nav navbar-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="ret">View All</a></li>
-      <li><a href="admin1">Admin</a></li>
+      <li><a href="ret">Category</a></li>
+      <li><a href="admin1">View All</a></li>
        <li><a href="Contact us">Contact us</a></li>
-       <li style=padding-left:500><a href="Register"><span class="glyphicon glyphicon-user"></span>Sign up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+       <li style=padding-left:500><a href="Register"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
      </ul></font>
   </div>
 </nav>
   
+  <br><br><br><br><br><br><br>
 
 <div class="container">
   
@@ -63,20 +104,20 @@
     
     
       <div class="item active">
-         <img src="<c:url value="/resources/images/cam05.jpg"/>" alt="Chania" style="width:1000px; height:400px">
+         <img src="<c:url value="/resources/images/cam05.jpg"/>" alt="Chania" style="width:100000px; height:300px">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/images/cam07.jpg"/>" alt="Chania" style="width:1000px; height:400px">
+        <img src="<c:url value="/resources/images/cam07.jpg"/>" alt="Chania" style="width:100000px; height:300px">
       </div>
     
       <div class="item">
-        <img src="<c:url value="/resources/images/cam13.jpg"/>" alt="Chania" style="width:1000px;height:400px"> 
+        <img src="<c:url value="/resources/images/cam13.jpg"/>" alt="Chania" style="width:100000px;height:300px"> 
       </div>
       
       
        <div class="item">
-         <img src="<c:url value="/resources/images/cam09.png"/>" alt="Chania" style="width:1000px;height:400px">
+         <img src="<c:url value="/resources/images/cam09.png"/>" alt="Chania" style="width:100000px;height:300px">
       </div>
       
           <!-- Left and right controls -->
@@ -110,5 +151,6 @@
     </div>
   </div>
 </div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
 </body>
 </html>
